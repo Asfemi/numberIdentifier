@@ -5,6 +5,7 @@ function identifyCarrier() {
 
     // Regular expressions to match phone number patterns
     const mtnPattern = /^(\+234|0)[7-9]\d{9}$/;
+    //todo: acommodate other sort of numbers
     const gloPattern = /^(\+234|0)[5]\d{9}$/;
     const airtelPattern = /^(\+234|0)[8]\d{9}$/;
     const etisalatPattern = /^(\+234|0)[9]\d{9}$/;

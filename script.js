@@ -6,7 +6,7 @@ function identifyCarrier() {
     //well i know some of this logic is fixed with enabling only the number keypad 
     //but for cases where you cant restrict the users input its good to work on the logic
     //plus it would be extra fun
-
+   
     //todo: check if the formfield contains other characters asides digits
     //todo: if so remove them and then add the digits together
     //todo: eg: (ds&klkn1.3jhs4#587ksjf *  oefisj498) would turn to (134587498)

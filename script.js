@@ -89,3 +89,8 @@ function identifyCarrier() {
         noCarrierLogo.style.display = 'block';
     }
 }
+ 
+const RESET_BUTTON = document.getElementById('reset');
+RESET_BUTTON,addEventListener('click', function(){
+    phoneNumber = "";
+})

@@ -47,6 +47,11 @@ function identifyCarrier() {
     //todo: if so remove them and then add the digits together
     //todo: eg: (ds&klkn1.3jhs4#587ksjf *  oefisj498) would turn to (134587498)
 
+    //Filter the number inputted
+    let filteredPhoneNo;
+    phoneNumber[0] == 0 ? filteredPhoneNo = phoneNumber.replaceAll(/\D/g, "") : filteredPhoneNo = "+" + phoneNumber.replaceAll(/\D/g, "");
+    console.log(filteredPhoneNo);
+
     //todo: and then we'd check if the number length is within the designated length(that is too short or too long)
 
     //todo: Add validation - Use the pattern attribute of the HTML form field to restrict phone numbers to a certain carrier, 
@@ -68,20 +73,26 @@ function identifyCarrier() {
     const eMobileLogo = document.querySelector('.mobile-logo img');
     const noCarrierLogo = document.querySelector('.nocarrier-logo img');
 
-// checking for matched numbers
-    if (mtnPattern.test(phoneNumber)) {
+    const displayNetworkImg = document.getElementById('displayNetworkImg'); //Img element
+    
+    // checking for matched numbers
+    if (mtnPattern.test(filteredPhoneNo)) {
+        displayNetworkImg.src = "./assets/mtnlogo.png"; // Set the source (URL) of the image
         carrierResult.textContent = "MTN";
         // You can also display an MTN logo here
         mtnLogo.style.display = 'block'
-    } else if (gloPattern.test(phoneNumber)) {
+    } else if (gloPattern.test(filteredPhoneNo)) {
+        displayNetworkImg.src = "./assets/Globacom-Limited-Logo.svg"; // Set the source (URL) of the image
         carrierResult.textContent = "GLO";
         // You can also display a GLO logo here
         gloLogo.style.display = 'block'
-    } else if (airtelPattern.test(phoneNumber)) {
+    } else if (airtelPattern.test(filteredPhoneNo)) {
+        displayNetworkImg.src = "./assets/mtnlogo.png"; // Set the source (URL) of the image
         carrierResult.textContent = "Airtel";
         // You can also display an Airtel logo here
         airtelLogo.style.display = 'block'
-    } else if (etisalatPattern.test(phoneNumber)) {
+    } else if (etisalatPattern.test(filteredPhoneNo)) {
+        displayNetworkImg.src = "./assets/9mobile-Logo.svg"; // Set the source (URL) of the image
         carrierResult.textContent = "9mobile";
         // You can also display a 9mobile logo here
         eMobileLogo.style.display = 'block'

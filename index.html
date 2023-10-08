@@ -53,7 +53,8 @@
         <p>Dedicated to bringing certainty in mobile phone number validation across all providers</p>
         <form id="phoneForm">
             <div>
-                <input type="text" id="phoneNumber"  list="countryCodes" name="phoneNumbers" placeholder="(902)-445-3278" required>
+                <span id="displayNetwork"><img src="./assets/Airtel_Networks_Limited-Logo.wine.svg" id="displayNetworkImg"></span>
+                <input type="text" id="phoneNumber"  list="countryCodes" name="phoneNumbers" placeholder="(902)-445-3278" maxlength="14" pattern="/^(\+234|0)(802|902|701|808|708|812|901|907)\d{7}$/" required>
                 <datalist id="countryCodes">
                     <option value="+233"> &#x1F1FF;&#x1F1E6; South Africa(+27)</option>
                     <option value="+234" >&#x1F1F3;&#x1F1EC; Nigeria (+234)</option>
@@ -61,10 +62,10 @@
                     <option value="+237" >&#x1F1E8;&#x1F1F2; Cameroon (+237)</option>
                     <option value="+254" >&#x1F1F0;&#x1F1EA; Kenya (+254)</option>
                     <option value="+255" >&#x1F1E8;&#x1F1EE; Ivory Coast (+225)</option>
-                     Add more country codes and names as needed 
+                    Add more country codes and names as needed 
                 </datalist>
             </div>
-            <button type="button" onclick="identifyCarrier()">Check Carrier</button> <button id="Reset">Agin</button>
+            <button type="button" onclick="identifyCarrier()">Check Carrier</button> <button id="Reset">Again</button>
         </form>
         <!--  -->
     </main>

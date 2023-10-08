@@ -33,6 +33,7 @@
 9. ZOOM MOBILE
 
 0707 */
+
 function identifyCarrier() {
     const phoneNumberInput = document.getElementById("phoneNumber");
     const carrierResult = document.getElementById("carrierResult");
@@ -60,14 +61,14 @@ function identifyCarrier() {
     const airtelPattern = /^(\+234|0)(802|902|701|808|708|812|901|907)\d{7}$/;
     const etisalatPattern = /^(\+234|0)(809|909|817|818|908)\d{7}$/;
 
-    
+    // this is where the logos are stored
     const gloLogo = document.querySelector('.glo-logo img');
     const mtnLogo = document.querySelector('.mtn-logo img');
     const airtelLogo = document.querySelector('.airtel-logo img');
     const eMobileLogo = document.querySelector('.mobile-logo img');
     const noCarrierLogo = document.querySelector('.nocarrier-logo img');
 
-
+// checking for matched numbers
     if (mtnPattern.test(phoneNumber)) {
         carrierResult.textContent = "MTN";
         // You can also display an MTN logo here
@@ -89,7 +90,7 @@ function identifyCarrier() {
         noCarrierLogo.style.display = 'block';
     }
 }
- 
+//  resets the value of inputField
 const RESET_BUTTON = document.getElementById('reset');
 RESET_BUTTON,addEventListener('click', function(){
     phoneNumber = "";

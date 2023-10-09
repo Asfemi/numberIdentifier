@@ -12,7 +12,7 @@ function identifyCarrier() {
     //todo: eg: (ds&klkn1.3jhs4#587ksjf *  oefisj498) would turn to (134587498)
 
     //todo: and then we'd check if the number length is within the designated length(that is too short or too long)
-ldkfsjdbh
+
     //todo: Add validation - Use the pattern attribute of the HTML form field to restrict phone numbers to a certain carrier, 
     //todo: e.g restrict to only Airtel such that entering an MTN/GLO number would be invalid
 

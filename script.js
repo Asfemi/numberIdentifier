@@ -6,7 +6,7 @@ function identifyCarrier() {
     //well i know some of this logic is fixed with enabling only the number keypad 
     //but for cases where you cant restrict the users input its good to work on the logic
     //plus it would be extra fun
-   
+
     //todo: check if the formfield contains other characters asides digits
     //todo: if so remove them and then add the digits together
     //todo: eg: (ds&klkn1.3jhs4#587ksjf *  oefisj498) would turn to (134587498)
@@ -20,10 +20,11 @@ function identifyCarrier() {
     //todo: Still detect the carrier even if the user prefixed the number with their +XYZ country code
 
     // Regular expressions to match phone number patterns
-    const mtnPattern = /^(\+234|0)[7-9]\d{9}$/;
-    const gloPattern = /^(\+234|0)[5]\d{9}$/;
-    const airtelPattern = /^(\+234|0)[8]\d{9}$/;
-    const etisalatPattern = /^(\+234|0)[9]\d{9}$/;
+    const mtnPattern = /^(?:\+234|0)[7-9]\d{9}$/;
+    const gloPattern = /^(?:\+234|0)[5]\d{9}$/;
+    const airtelPattern = /^(?:\+234|0)[8]\d{9}$/;
+    const etisalatPattern = /^(?:\+234|0)[9]\d{9}$/;
+
 
     if (mtnPattern.test(phoneNumber)) {
         carrierResult.textContent = "MTN";

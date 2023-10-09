@@ -201,3 +201,9 @@ button:hover{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+
+#invalid {
+    display: none;
+    color: red;
+    /* margin: 10px 5px; */
+}

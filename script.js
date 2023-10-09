@@ -28,6 +28,7 @@ function identifyCarrier() {
 
     if (mtnPattern.test(phoneNumber)) {
         carrierResult.textContent = "MTN";
+        alert('MTN line');
         // You can also display an MTN logo here
     } else if (gloPattern.test(phoneNumber)) {
         carrierResult.textContent = "GLO";

@@ -27,8 +27,35 @@ body {
 }
 .first-header {
   background-color: var(--skyBlue-bg);
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 90px;
+  font-size: 20px;
+  font-weight: lighter;
 }
-.flex-header {
+.first-header img {
+  width: 25px;
+}
+.address_contact {
+  width: 40%;
+  display: flex;
+  gap: 50px;
+}
+.contact,
+.address {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons img {
+  margin-left: 36px;
+  cursor: pointer;
+}
+/* .flex-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,36 +78,8 @@ body {
 .first-header-left .first-header-left-content1 .first-header-left-content2 {
   line-height: 100%;
   padding-left: 20px;
-}
-/* second header */
-.flex2-header2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 7px;
-}
-.main-logo > img {
-  width: 170px;
-}
-.contact-side {
-  display: flex;
-  align-items: center;
-}
-.contact-side-content > p > span {
-  font-weight: bold;
-}
-nav ul {
-  display: flex;
-}
-nav ul li a {
-  color: var(--text-light-black);
-  padding-left: 20px;
-  transition: 0.4s ease-in-out;
-  font-size: 1.2rem;
-}
-nav ul li a:hover {
-  color: #ccc;
-}
+} */
+
 .formsection,
 h1 {
   text-align: center;

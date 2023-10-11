@@ -59,6 +59,9 @@ function updateCarrierIcon() {
     } else if (selectedCarrier === "9mobile") {
         displayNetworkImg.src = "./assets/9mobile-Logo.svg";
     }
+
+    const selectElement = document.getElementById("carrierSelect");
+    selectElement.style.display = "none";
 }
 
 // Attach the change event to the carrier select element.
@@ -68,6 +71,20 @@ carrierSelect.addEventListener("change", updateCarrierIcon);
 // Initial call to set the image based on the default selected carrier.
 updateCarrierIcon();
 
+
+function toggleSelect() {
+    // Get a reference to the select element
+    const selectElement = document.getElementById("carrierSelect");
+
+    // Toggle the display property
+    if (selectElement.style.display === "none") {
+        selectElement.style.display = "block";
+        selectElement.click();
+
+    } else {
+        selectElement.style.display = "none";
+    }
+}
 
 
 //  resets the value of inputField

@@ -46,7 +46,7 @@
     </p>
     <form id="phoneForm">
       <div>
-        <span id="displayNetwork">
+        <span id="displayNetwork" onclick="toggleSelect()">
             <img src="./assets/Airtel_Networks_Limited-Logo.wine.svg" id="displayNetworkImg" />
         </span>
         <select id="carrierSelect" onchange="updateCarrierIcon()">
@@ -55,7 +55,7 @@
             <option value="glo">GLO</option>
             <option value="9mobile">9mobile</option>
         </select>
-        <input type="text" id="phoneNumber" list="countryCodes" name="phoneNumber" placeholder="Enter your phone number" maxlength="14" />
+        <input type="number" id="phoneNumber" list="countryCodes" name="phoneNumber" placeholder="Enter your phone number" maxlength="14" />
     </div>
     
       <!-- <h6 id="invalid">Invalid number!</h6> -->

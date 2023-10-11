@@ -44,17 +44,30 @@ function handleFormSubmission(event) {
 document.getElementById("phoneForm").addEventListener("submit", handleFormSubmission);
 
 
+// Function to update the carrier icon based on the selected carrier.
 function updateCarrierIcon() {
     const carrierSelect = document.getElementById("carrierSelect");
-    const carrierIcon = document.getElementById("carrierIcon");
+    const displayNetworkImg = document.getElementById("displayNetworkImg");
     const selectedCarrier = carrierSelect.value;
-    const selectedOption = carrierSelect.options[carrierSelect.selectedIndex];
-    const iconUrl = selectedOption.getAttribute("data-icon");
 
-    carrierIcon.style.backgroundImage = `url(${iconUrl})`;
+    if (selectedCarrier === "airtel") {
+        displayNetworkImg.src = "./assets/Airtel_Networks_Limited-Logo.wine.svg";
+    } else if (selectedCarrier === "mtn") {
+        displayNetworkImg.src = "./assets/mtnlogo.png";
+    } else if (selectedCarrier === "glo") {
+        displayNetworkImg.src = "./assets/Globacom-Limited-Logo.svg";
+    } else if (selectedCarrier === "9mobile") {
+        displayNetworkImg.src = "./assets/9mobile-Logo.svg";
+    }
 }
 
-document.getElementById("carrierSelect").addEventListener("change", updateCarrierIcon);
+// Attach the change event to the carrier select element.
+const carrierSelect = document.getElementById("carrierSelect");
+carrierSelect.addEventListener("change", updateCarrierIcon);
+
+// Initial call to set the image based on the default selected carrier.
+updateCarrierIcon();
+
 
 
 //  resets the value of inputField
@@ -62,5 +75,5 @@ const RESET_BUTTON = document.getElementById("reset");
 RESET_BUTTON,
   addEventListener("click", function () {
     phoneNumber = "";
-    this.alert('number has been reset')
+    //this.alert('number has been reset')
   });

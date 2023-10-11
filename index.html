@@ -15,7 +15,7 @@
     <div class="first-header">
       <div class="main-logo">
         <img src="./assets/myGroupLogo.png" alt="">
-    </div>
+      </div>
       <!-- <div class="address_contact">
         <div class="contact">
           <div class="img"><img src="./assets/inbox.png" alt="" class="first-header-left-logo" /></div>
@@ -40,21 +40,25 @@
   <main class="formsection container">
     <h1>Phone Number Carrier Identification</h1>
     <p>
+
       Dedicated to bringing certainty in mobile phone number validation across
       all providers
     </p>
     <form id="phoneForm">
       <div>
+        <span id="displayNetwork">
+            <img src="./assets/Airtel_Networks_Limited-Logo.wine.svg" id="displayNetworkImg" />
+        </span>
         <select id="carrierSelect" onchange="updateCarrierIcon()">
-          <option value="airtel" data-icon="airtel-icon.png">Airtel</option>
-          <option value="mtn" data-icon="mtn-icon.png">MTN</option>
-          <option value="glo" data-icon="glo-icon.png">GLO</option>
-          <option value="9mobile" data-icon="9mobile-icon.png">9mobile</option>
-      </select>
-        <input type="text" id="phoneNumber" list="countryCodes" name="phoneNumber" placeholder="Enter your phone number"
-          maxlength="14" />
-      </div>
-      <h6 id="invalid">Invalid number!</h6>
+            <option value="airtel">Airtel</option>
+            <option value="mtn">MTN</option>
+            <option value="glo">GLO</option>
+            <option value="9mobile">9mobile</option>
+        </select>
+        <input type="text" id="phoneNumber" list="countryCodes" name="phoneNumber" placeholder="Enter your phone number" maxlength="14" />
+    </div>
+    
+      <!-- <h6 id="invalid">Invalid number!</h6> -->
       <datalist id="countryCodes">
         <option value="+20">&#x1F1E7;&#x1F1E9; Egypt (+20)</option>
         <option value="+212">&#x1F1E6;&#x1F1F2; Morocco (+212)</option>
@@ -128,9 +132,9 @@
         <option value="+256">&#x1F1FA;&#x1F1EC; Uganda (+256)</option>
         <option value="+260">&#x1F1F9;&#x1F1EC; Zambia (+260)</option>
         <option value="+263">&#x1F1FF;&#x1F1FC; Zimbabwe (+263)</option>
-    </datalist>
-    
-      <button type="button" onclick="identifyCarrier()">Check Carrier</button>
+      </datalist>
+
+      <button type="submit" onclick="identifyCarrier()">Check Carrier</button>
       <button id="Reset">Again</button>
     </form>
   </main>

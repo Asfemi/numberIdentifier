@@ -1,151 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&family=Lato:wght@300;400;700;900&family=Metrophobic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Roboto:wght@300;400;500;700;900&family=Young+Serif&display=swap');
-
-:root {
-    --white-bg: #fff;
-    --skyBlue-bg: #f2fbff;
-    --orange-btn: #ff9801;
-    --orange-btn-hover: #f57100;
-    --blue-btn: #03a9f4;
-    --blue-btn-hover: #009be0;
-    --text-light-black: #2a2a2e;
-}
-
+/* Reset default styles and apply some global styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-}
-
-body {
+  }
+  
+  body {
     font-family: 'heebo';
     background-color: var(--white-bg);
     max-height: 100vh;
-}
-
-.container {
+  }
+  
+  .container {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.first-header {
+  }
+  
+  /* First Header Styles */
+  header {
     background-color: var(--skyBlue-bg);
-}
-
-.flex-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 7px;
-}
-
-.first-header-left-logo {
-    width: 20px;
-}
-
-.first-header-right-logo {
-    width: 40px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.first-header-left {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-
-}
-
-.first-header-left .first-header-left-content1 .first-header-left-content2 {
-    line-height: 100%;
-    padding-left: 20px;
-}
-
-/* second header */
-.flex2-header2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 7px;
-}
-
-.main-logo>img {
+  }
+  
+  .header-logo {
     width: 170px;
-}
-
-.contact-side {
-    display: flex;
-    align-items: center;
-}
-
-.contact-side-content>p>span {
-    font-weight: bold;
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li a {
-    color: var(--text-light-black);
-    padding-left: 20px;
-    transition: 0.4s ease-in-out;
-    font-size: 1.2rem;
-}
-
-nav ul li a:hover {
-    color: #ccc;
-}
-
-.formsection,
-h1 {
+  }
+  
+  /* Main Section Styles */
+  .formsection {
     text-align: center;
+    margin-top: 50px;
+  }
+  
+  .formsection h1 {
     font-size: 2.5rem;
     color: var(--text-light-black);
-}
-
-.formsection p {
-    text-align: center;
+  }
+  
+  .formsection p {
     font-size: 1.5rem;
     padding-top: 20px;
-}
-
-.formsection {
-    margin-top: 50px;
-}
-
-form {
+  }
+  
+  form {
     text-align: center;
     margin-top: 0px;
-}
-
-label {
-    font-weight: bold;
-}
-
-input[type="text"] {
-    padding: 15px 10px;
-    margin-top: 40px;
-    width: 350px;
+  }
+  
+  /* Form Elements */
+  form div {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #displayNetwork {
+    width: 60px;
+    height: 50px;
     border: 1px solid #ccc;
-    border-left: 0;
-    /* border-radius: 3px; */
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    outline-width: 1px;
-    outline-color: #98d9f7;
-}
-
-input::placeholder {
-    font-size: 16px;
-}
-
-button {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 40px;
+  }
+  
+  #displayNetworkImg {
+    width: 59px;
+    height: 48px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  #carrierSelect {
+    height: 30px; /* Adjust the height as needed */
+  }
+  
+  #phoneNumber {
+    height: 30px; /* Set the desired height for the text field */
+  }
+  
+  button {
     padding: 10px;
     background-color: var(--orange-btn);
-    padding: 10px;
     width: 350px;
     color: #fff;
     border: none;
@@ -153,89 +90,70 @@ button {
     cursor: pointer;
     transition: 0.4s ease-in-out;
     box-shadow: 1px 3px 3px #9ad7f3;
-}
-
-button:hover {
+    margin-top: 10px; /* Added margin for better spacing */
+  }
+  
+  button:hover {
     background-color: var(--orange-btn-hover);
-}
-
-#carrierResult {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.fancy-bg {
+  }
+  
+  /* Fancy Background Styles */
+  .fancy-bg {
     font-size: 48px;
-    /* Adjust the size as needed */
-    /* background: linear-gradient(to right, green 33%, white 33%, white 66%, green 66%); */
     padding: 20px;
     border: 1px solid #ccc;
     max-width: 90%;
     height: 250px;
     border-radius: 7px;
     margin: 30px;
-    
-}
-
-/* logos */
-.glo-logo img {
+  }
+  
+  /* Carrier Logo Styles */
+  .fancy-bg .logo img {
     width: 90px;
     margin-top: 0px;
     margin-left: 390px;
     display: none;
-}
-
-.mtn-logo img {
+  }
+  
+  /* Custom Styles for Carrier Logos */
+  .mtn-logo img {
     width: 100px;
     margin-top: 0px;
     margin-left: 390px;
-    display: none;
-}
-
-.mobile-logo img {
+  }
+  
+  .airtel-logo img {
     width: 90px;
     margin-top: 0px;
     margin-left: 390px;
-    display: none;
-}
-
-.airtel-logo img {
+  }
+  
+  .mobile-logo img {
     width: 100px;
     margin-top: 0px;
     margin-left: 390px;
-    display: none;
-}
-
-.nocarrier-logo img {
+  }
+  
+  .glo-logo img {
     width: 90px;
     margin-top: 0px;
     margin-left: 390px;
-    display: none;
-}
-
-#phoneForm>div {
+  }
+  
+  .nocarrier-logo img {
+    width: 90px;
+    margin-top: 0px;
+    margin-left: 390px;
+  }
+  
+  #phoneForm > div {
     display: flex;
     justify-content: center;
-}
-
-#displayNetwork {
-    width: 60px;
-    height: 50px;
-    border: 1px solid #ccc;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    margin-top: 40px;
-}
-
-#displayNetworkImg {
-    width: 59px;
-    height: 48px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-#invalid {
-    display: none;
-    color: red;
-    /* margin: 10px 5px; */
-}
+  }
+  
+  #carrierResult {
+    text-align: center;
+    margin-top: 20px;
+  }
+  

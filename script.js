@@ -1,38 +1,4 @@
-/*1. MTN NG
 
-0803, 0806, 0703, 0903, 0906, 0806, 0706, 0813, 0810, 0814, 0816, 0913, 0916
-
-2. GLO NG
-
-0805, 0705, 0905, 0807, 0815, 0811, 0915
-
-3. AIRTEL NG
-
-0802, 0902, 0701, 0808, 0708, 0812, 0901, 0907
-
-4. ETISALAT NG/9MOBILE
-
-0809, 0909, 0817, 0818, 0908
-
-5. VISAFONE
-
-0704, 07025, 07026
-
-6. MULTILINKS
-
-0709, 07029
-
-7. STARCOMMS
-
-0819, 07028, 07029
-
-8. NITEL
-
-0804
-
-9. ZOOM MOBILE
-
-0707 */
 
 function identifyCarrier() {
     const phoneNumberInput = document.getElementById("phoneNumber");
@@ -48,7 +14,6 @@ function identifyCarrier() {
     //todo: eg: (ds&klkn1.3jhs4#587ksjf *  oefisj498) would turn to (134587498)
 
     //todo: and then we'd check if the number length is within the designated length(that is too short or too long)
-ldkfsjdbh
     //todo: Add validation - Use the pattern attribute of the HTML form field to restrict phone numbers to a certain carrier, 
     //todo: e.g restrict to only Airtel such that entering an MTN/GLO number would be invalid
 
@@ -56,11 +21,10 @@ ldkfsjdbh
   //todo: Still detect the carrier even if the user prefixed the number with their +XYZ country code
 
   // Regular expressions to match phone number patterns
-  const mtnPattern =
-    /^(\+234|0)(803|806|703|903|906|806|706|0813|0810|0814|816|913|916)\d{7}$/;
-  const gloPattern = /^(\+234|0)(805|705|905|807|815|811|915)\d{7}$/;
-  const airtelPattern = /^(\+234|0)(802|902|701|808|708|812|901|907)\d{7}$/;
-  const etisalatPattern = /^(\+234|0)(809|909|817|818|908)\d{7}$/;
+  const mtnPattern = /^(?:\+234|0)[7-9]\d{9}$/;
+  const gloPattern = /^(?:\+234|0)[5]\d{9}$/;
+  const airtelPattern = /^(?:\+234|0)[8]\d{9}$/;
+  const etisalatPattern = /^(?:\+234|0)[9]\d{9}$/;
 
   const airtelLogo = document.querySelector(".airtel-logo img");
   const noCarrierLogo = document.querySelector(".nocarrier-logo img");
@@ -96,6 +60,7 @@ ldkfsjdbh
   } else {
     carrierResult.textContent = "Carrier not recognized";
     noCarrierLogo.style.display = "block";
+    alert("Carrier not recognized");
   }
 }
 //  resets the value of inputField
@@ -103,4 +68,5 @@ const RESET_BUTTON = document.getElementById("reset");
 RESET_BUTTON,
   addEventListener("click", function () {
     phoneNumber = "";
+    this.alert('number has been reset')
   });

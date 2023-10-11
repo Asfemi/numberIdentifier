@@ -1,19 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Number Carrier Identification</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phone Number Carrier Identification</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="./assets/Favicon.png" type="image/x-icon" />
 </head>
+
 <body>
+  <!--   --nav-contact-details-start--  -->
+  <header>
+    <div class="first-header">
+      <div class="address_contact">
+        <div class="contact">
+          <div class="img"><img src="./assets/inbox.png" alt="" class="first-header-left-logo" /></div>
+          <h6>contact@dctp.com</h6>
+        </div>
+        <div class="address">
+          <div class="img"><img src="./assets/location.png" alt="" class="first-header-left-logo" /></div>
+          <h6>90, Tech Avenue, Tech City</h6>
+        </div>
+      </div>
+      <div class="social-icons">
+        <img src="./assets/facebook.png" alt="">
+        <img src="./assets/twitter.png" alt="">
+        <img src="./assets/instagram.png" alt="">
+        <img src="./assets/linkedin.png" alt="">
+      </div>
+    </div>
+  </header>
+  <!--   --nav-contact-details-end--   -->
+
+  <!--   --main-section start--    -->
+  <main class="formsection container">
     <h1>Phone Number Carrier Identification</h1>
+    <p>
+      Dedicated to bringing certainty in mobile phone number validation across
+      all providers
+    </p>
     <form id="phoneForm">
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="text" id="phoneNumber" name="phoneNumber" required>
-        <button type="button" onclick="identifyCarrier()">Check Carrier</button>
+      <div>
+        <span id="displayNetwork"><img src="./assets/Airtel_Networks_Limited-Logo.wine.svg"
+            id="displayNetworkImg" /></span>
+        <input type="text" id="phoneNumber" list="countryCodes" name="phoneNumbers" placeholder="(902)-445-3278"
+          maxlength="14" pattern="/^(\+234|0)(802|902|701|808|708|812|901|907)\d{7}$/" required />
+      </div>
+      <h6 id="invalid">Invalid number!</h6>
+      <datalist id="countryCodes">
+        <option value="+233">&#x1F1FF;&#x1F1E6; South Africa(+27)</option>
+        <option value="+234">&#x1F1F3;&#x1F1EC; Nigeria (+234)</option>
+        <option value="+256">&#x1F1FA;&#x1F1EC; Uganda (+256)</option>
+        <option value="+237">&#x1F1E8;&#x1F1F2; Cameroon (+237)</option>
+        <option value="+254">&#x1F1F0;&#x1F1EA; Kenya (+254)</option>
+        <option value="+255">&#x1F1E8;&#x1F1EE; Ivory Coast (+225)</option>
+        Add more country codes and names as needed
+      </datalist>
+      <button type="button" onclick="identifyCarrier()">Check Carrier</button>
+      <button id="Reset">Again</button>
     </form>
-    <div id="carrierResult"></div>
-    <script src="script.js"></script>
+  </main>
+  <main class="background-section container">
+    <div class="fancy-bg">
+      <div id="carrierResult" title="This is a good Provider"></div>
+      <div class="glo-logo">
+        <img src="./assets/Globacom-Limited-Logo.svg" alt="" />
+      </div>
+      <div class="mtn-logo"><img src="./assets/mtnlogo.png" alt="" /></div>
+      <div class="mobile-logo">
+        <img src="./assets/9mobile-Logo.svg" alt="" />
+      </div>
+      <div class="airtel-logo">
+        <img src="./assets/Airtel_Networks_Limited-Logo.wine.svg" alt="" />
+      </div>
+      <div class="nocarrier-logo">
+        <img src="./assets/generalCarrier.png" alt="" />
+      </div>
+    </div>
+  </main>
+  <!--   --main-section end--    -->
+  <script src="script.js"></script>
 </body>
+
 </html>

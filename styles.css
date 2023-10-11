@@ -1,14 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&family=Lato:wght@300;400;700;900&family=Metrophobic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Roboto:wght@300;400;500;700;900&family=Young+Serif&display=swap');
+
+:root{
+    --white-bg: #fff;
+    --skyBlue-bg: #f2fbff;
+    --orange-btn: #ff9801;
+    --orange-btn-hover: #f57100;
+    --blue-btn: #03a9f4;
+    --blue-btn-hover: #009be0;
+    --text-light-black: #2a2a2e;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'heebo';
+    background-color: var(--white-bg);
+    max-height: 100vh;
 }
-
-h1 {
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.first-header{
+    background-color: var(--skyBlue-bg);
+}
+.flex-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+}
+.first-header-left-logo{
+    width: 20px;
+}
+.first-header-right-logo{
+    width: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+.first-header-left{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    
+}
+.first-header-left .first-header-left-content1 .first-header-left-content2{
+    line-height: 100%;
+    padding-left: 20px;
+}
+/* second header */
+.flex2-header2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+}
+.main-logo >img{
+    width: 170px;
+}
+.contact-side{
+    display: flex;
+    align-items: center;
+}
+.contact-side-content > p > span{
+    font-weight: bold;
+}
+nav ul{
+    display: flex;
+}
+nav ul  li a{
+    color: var(--text-light-black);
+    padding-left: 20px;
+    transition: 0.4s ease-in-out;
+    font-size: 1.2rem;
+}
+nav ul  li a:hover{
+    color: #ccc;
+}
+.formsection, h1 {
     text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-light-black);
 }
-
+.formsection p{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 20px;
+}
+.formsection{
+    margin-top: 50px;
+}
 form {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 label {
@@ -16,20 +105,105 @@ label {
 }
 
 input[type="text"] {
-    padding: 5px;
-    margin: 5px;
-    width: 250px;
+    padding: 15px 10px;
+    margin-top: 40px;
+    width: 350px;
+    border: 1px solid #ccc;
+    border-left: 0;
+    /* border-radius: 3px; */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline-width: 1px;
+    outline-color: #98d9f7;
 }
-
+input::placeholder{
+    font-size: 16px;
+}
 button {
-    padding: 5px 10px;
-    background-color: #007bff;
+    padding: 10px;
+    background-color: var(--orange-btn);
+    padding: 10px;
+    width: 350px;
     color: #fff;
     border: none;
+    border-radius: 3px;
     cursor: pointer;
+    transition: 0.4s ease-in-out;
+    box-shadow:  1px  3px 3px #9ad7f3;
 }
-
+button:hover{
+    background-color: var(--orange-btn-hover);
+}
 #carrierResult {
     text-align: center;
     margin-top: 20px;
+}
+.fancy-bg {
+    font-size: 48px; /* Adjust the size as needed */
+    /* background: linear-gradient(to right, green 33%, white 33%, white 66%, green 66%); */
+    padding: 10px;
+    border: 1px solid #ccc; 
+    max-width: 900px;
+    height: 150px;
+    border-radius: 7px;
+    margin-left: 150px;
+}
+/* logos */
+.glo-logo img{
+    width: 90px;
+    margin-top: 0px;
+    margin-left: 390px;
+    display: none;
+}
+.mtn-logo img{
+    width: 100px;
+    margin-top: 0px;
+    margin-left: 390px;
+    display: none;
+}
+.mobile-logo img{
+    width: 90px;
+    margin-top: 0px;
+    margin-left: 390px;
+    display: none;
+}
+.airtel-logo img{
+    width: 100px;
+    margin-top: 0px;
+    margin-left: 390px;
+    display: none;
+}
+
+.nocarrier-logo img{
+    width: 90px;
+    margin-top: 0px;
+    margin-left: 390px;
+    display: none;
+}
+
+#phoneForm>div {
+    display: flex;
+    justify-content: center;
+}
+
+#displayNetwork {
+    width: 60px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 40px;
+}
+
+#displayNetworkImg {
+    width: 59px;
+    height: 48px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#invalid {
+    display: none;
+    color: red;
+    /* margin: 10px 5px; */
 }

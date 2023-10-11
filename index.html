@@ -45,10 +45,14 @@
     </p>
     <form id="phoneForm">
       <div>
-        <span id="displayNetwork"><img src="./assets/Airtel_Networks_Limited-Logo.wine.svg"
-            id="displayNetworkImg" /></span>
-        <input type="text" id="phoneNumber" list="countryCodes" name="phoneNumbers" placeholder="(902)-445-3278"
-          maxlength="14" pattern="/^(\+234|0)(802|902|701|808|708|812|901|907)\d{7}$/" required />
+        <select id="carrierSelect" onchange="updateCarrierIcon()">
+          <option value="airtel" data-icon="airtel-icon.png">Airtel</option>
+          <option value="mtn" data-icon="mtn-icon.png">MTN</option>
+          <option value="glo" data-icon="glo-icon.png">GLO</option>
+          <option value="9mobile" data-icon="9mobile-icon.png">9mobile</option>
+      </select>
+        <input type="text" id="phoneNumber" list="countryCodes" name="phoneNumber" placeholder="Enter your phone number"
+          maxlength="14" />
       </div>
       <h6 id="invalid">Invalid number!</h6>
       <datalist id="countryCodes">

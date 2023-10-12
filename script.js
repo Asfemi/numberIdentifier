@@ -1,6 +1,6 @@
 
 
-// Function to validate a phone number based on the selected carrier.
+
 function validatePhoneNumber(phoneNumber, selectedCarrier) {
     let pattern;
     switch (selectedCarrier) {
@@ -17,13 +17,13 @@ function validatePhoneNumber(phoneNumber, selectedCarrier) {
             pattern = /^(\+234|0)[9]\d{9}$/;
             break;
         default:
-            pattern = /^(\+234|0)\d{10}$/; // A generic pattern for other carriers in Nigeria.
+            pattern = /^(\+234|0)\d{10}$/; 
             break;
     }
     return pattern.test(phoneNumber);
 }
 
-// Function to handle form submission.
+
 function handleFormSubmission(event) {
     event.preventDefault();
     const phoneNumberField = document.getElementById("phoneNumber");
@@ -31,20 +31,31 @@ function handleFormSubmission(event) {
     const selectedCarrier = carrierSelect.value;
     const phoneNumber = phoneNumberField.value;
     
-    if (!validatePhoneNumber(phoneNumber, selectedCarrier)) {
-        // Phone number is invalid, display an error message or take appropriate action.
+    if (!/^[\d+]+$/.test(phoneNumber)) {
+
+        alert("Phone number should contain only digits.");
+    } else if (phoneNumber.length !== 14 ) { 
+        if ( phoneNumber.length !== 13){
+            if( phoneNumber.length !== 11){
+               alert("Phone number should be 11 digits long.");
+            }
+        }
+        
+    } else if (!validatePhoneNumber(phoneNumber, selectedCarrier)) {
+       
         alert(`Invalid phone number for ${selectedCarrier}. Please enter a valid number.`);
     } else {
-        // Phone number is valid, you can proceed with the submission.
+        
         alert(`Valid phone number for ${selectedCarrier}. Proceeding with the submission.`);
     }
 }
 
-// Attach the form submission handler.
+
+
 document.getElementById("phoneForm").addEventListener("submit", handleFormSubmission);
 
 
-// Function to update the carrier icon based on the selected carrier.
+
 function updateCarrierIcon() {
     const carrierSelect = document.getElementById("carrierSelect");
     const displayNetworkImg = document.getElementById("displayNetworkImg");
@@ -64,11 +75,11 @@ function updateCarrierIcon() {
     selectElement.style.display = "none";
 }
 
-// Attach the change event to the carrier select element.
+
 const carrierSelect = document.getElementById("carrierSelect");
 carrierSelect.addEventListener("change", updateCarrierIcon);
 
-// Initial call to set the image based on the default selected carrier.
+
 updateCarrierIcon();
 
 
@@ -85,12 +96,3 @@ function toggleSelect() {
         selectElement.style.display = "none";
     }
 }
-
-
-//  resets the value of inputField
-const RESET_BUTTON = document.getElementById("reset");
-RESET_BUTTON,
-  addEventListener("click", function () {
-    phoneNumber = "";
-    //this.alert('number has been reset')
-  });

@@ -55,7 +55,7 @@
             <option value="glo">GLO</option>
             <option value="9mobile">9mobile</option>
         </select>
-        <input type="number" id="phoneNumber" list="countryCodes" name="phoneNumber" placeholder="Enter your phone number" maxlength="14" />
+        <input type="text" id="phoneNumber" list="countryCodes" name="phoneNumber" placeholder="Enter your phone number" maxlength="14" autocomplete="off" />
     </div>
     
       <!-- <h6 id="invalid">Invalid number!</h6> -->
@@ -134,8 +134,8 @@
         <option value="+263">&#x1F1FF;&#x1F1FC; Zimbabwe (+263)</option>
       </datalist>
 
-      <button type="submit" onclick="identifyCarrier()">Check Carrier</button>
-      <button id="Reset">Again</button>
+      <button type="submit" onclick="handleFormSubmission(event)">Check Carrier</button>
+      <button type="Reset">Again</button>
     </form>
   </main>
   <main class="background-section container">

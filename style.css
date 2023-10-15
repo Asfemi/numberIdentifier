@@ -125,7 +125,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"] {
+input[type="number"] {
     padding: 15px 10px;
     margin-top: 40px;
     width: 350px;

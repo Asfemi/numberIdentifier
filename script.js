@@ -32,7 +32,6 @@ function handleFormSubmission(event) {
     const phoneNumber = phoneNumberField.value;
     
     if (!/^[\d+]+$/.test(phoneNumber)) {
-
         alert("Phone number should contain only digits.");
     } else if (phoneNumber.length !== 14 ) { 
         if ( phoneNumber.length !== 13){
@@ -44,6 +43,7 @@ function handleFormSubmission(event) {
     } else if (!validatePhoneNumber(phoneNumber, selectedCarrier)) {
        
         alert(`Invalid phone number for ${selectedCarrier}. Please enter a valid number.`);
+
     } else {
         
         alert(`Valid phone number for ${selectedCarrier}. Proceeding with the submission.`);

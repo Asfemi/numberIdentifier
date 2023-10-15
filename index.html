@@ -10,154 +10,33 @@
 </head>
 
 <body>
-  <!--   --nav-contact-details-start--  -->
   <header>
     <div class="first-header">
       <div class="main-logo">
         <img src="./assets/myGroupLogo.png" alt="">
       </div>
-      <!-- <div class="address_contact">
-        <div class="contact">
-          <div class="img"><img src="./assets/inbox.png" alt="" class="first-header-left-logo" /></div>
-          <h6>contact@dctp.com</h6>
-        </div>
-        <div class="address">
-          <div class="img"><img src="./assets/location.png" alt="" class="first-header-left-logo" /></div>
-          <h6>90, Tech Avenue, Tech City</h6>
-        </div>
-      </div> -->
-      <!-- <div class="social-icons">
-        <img src="./assets/facebook.png" alt="">
-        <img src="./assets/twitter.png" alt="">
-        <img src="./assets/instagram.png" alt="">
-        <img src="./assets/linkedin.png" alt="">
-      </div> -->
     </div>
   </header>
-  <!--   --nav-contact-details-end--   -->
-
-  <!--   --main-section start--    -->
   <main class="formsection container">
     <h1>Phone Number Carrier Identification</h1>
     <p>
-
       Dedicated to bringing certainty in mobile phone number validation across
       all providers
     </p>
     <form id="phoneForm">
       <div>
-        <span id="displayNetwork" onclick="toggleSelect()">
-            <img src="./assets/Airtel_Networks_Limited-Logo.wine.svg" id="displayNetworkImg" />
+        <span id="displayNetwork">
+            <img src="./assets/Favicon.png" id="displayNetworkImg" />
         </span>
-        <select id="carrierSelect" onchange="updateCarrierIcon()">
-            <option value="airtel">Airtel</option>
-            <option value="mtn">MTN</option>
-            <option value="glo">GLO</option>
-            <option value="9mobile">9mobile</option>
-        </select>
         <input type="text" id="phoneNumber" list="countryCodes" name="phoneNumber" placeholder="Enter your phone number" maxlength="14" autocomplete="off" />
-    </div>
-    
-      <!-- <h6 id="invalid">Invalid number!</h6> -->
+      </div>
       <datalist id="countryCodes">
-        <option value="+20">&#x1F1E7;&#x1F1E9; Egypt (+20)</option>
-        <option value="+212">&#x1F1E6;&#x1F1F2; Morocco (+212)</option>
-        <option value="+251">&#x1F1F5;&#x1F1F1; Ethiopia (+251)</option>
-        <option value="+20">&#x1F1F0;&#x1F1F3; Libya (+218)</option>
-        <option value="+216">&#x1F1EA;&#x1F1F8; Tunisia (+216)</option>
-        <option value="+256">&#x1F1FA;&#x1F1EC; Uganda (+256)</option>
-        <option value="+211">&#x1F1E6;&#x1F1F9; South Sudan (+211)</option>
-        <option value="+249">&#x1F1E6;&#x1F1F7; Sudan (+249)</option>
-        <option value="+220">&#x1F1EC;&#x1F1E6; Gambia (+220)</option>
-        <option value="+223">&#x1F1E9;&#x1F1F9; Mali (+223)</option>
-        <option value="+225">&#x1F1E8;&#x1F1EE; Ivory Coast (+225)</option>
         <option value="+234">&#x1F1F3;&#x1F1EC; Nigeria (+234)</option>
-        <option value="+237">&#x1F1E8;&#x1F1F2; Cameroon (+237)</option>
-        <option value="+254">&#x1F1F0;&#x1F1EA; Kenya (+254)</option>
-        <option value="+255">&#x1F1E8;&#x1F1EE; Tanzania (+255)</option>
-        <option value="+256">&#x1F1F9;&#x1F1FC; Uganda (+256)</option>
-        <option value="+260">&#x1F1F9;&#x1F1EC; Zambia (+260)</option>
-        <option value="+263">&#x1F1FF;&#x1F1FC; Zimbabwe (+263)</option>
-        <option value="+213">&#x1F1E9;&#x1F1E9; Algeria (+213)</option>
-        <option value="+244">&#x1F1E6;&#x1F1F2; Angola (+244)</option>
-        <option value="+229">&#x1F1E9;&#x1F1F3; Benin (+229)</option>
-        <option value="+267">&#x1F1E6;&#x1F1EC; Botswana (+267)</option>
-        <option value="+226">&#x1F1F7;&#x1F1EE; Burkina Faso (+226)</option>
-        <option value="+257">&#x1F1EA;&#x1F1F3; Burundi (+257)</option>
-        <option value="+238">&#x1F1E8;&#x1F1E6; Cabo Verde (+238)</option>
-        <option value="+237">&#x1F1F2;&#x1F1EB; Central African Republic (+236)</option>
-        <option value="+235">&#x1F1F7;&#x1F1E6; Chad (+235)</option>
-        <option value="+269">&#x1F1F2;&#x1F1F3; Comoros (+269)</option>
-        <option value="+243">&#x1F1E8;&#x1F1F7; Congo (Brazzaville) (+242)</option>
-        <option value="+243">&#x1F1E8;&#x1F1F7; Congo (Kinshasa) (+243)</option>
-        <option value="+225">&#x1F1E6;&#x1F1EC; Cote d'Ivoire (+225)</option>
-        <option value="+253">&#x1F1E9;&#x1F1EF; Djibouti (+253)</option>
-        <option value="+20">&#x1F1F2;&#x1F1F7; Egypt (+20)</option>
-        <option value="+240">&#x1F1F2;&#x1F1EB; Equatorial Guinea (+240)</option>
-        <option value="+291">&#x1F1E6;&#x1F1F7; Eritrea (+291)</option>
-        <option value="+268">&#x1F1F8;&#x1F1FE; Eswatini (+268)</option>
-        <option value="+251">&#x1F1F5;&#x1F1F1; Ethiopia (+251)</option>
-        <option value="+241">&#x1F1E6;&#x1F1F9; Gabon (+241)</option>
-        <option value="+220">&#x1F1EC;&#x1F1E6; Gambia (+220)</option>
-        <option value="+233">&#x1F1F0;&#x1F1EA; Ghana (+233)</option>
-        <option value="+224">&#x1F1E9;&#x1F1F7; Guinea (+224)</option>
-        <option value="+245">&#x1F1E6;&#x1F1F2; Guinea-Bissau (+245)</option>
-        <option value="+254">&#x1F1F0;&#x1F1EA; Kenya (+254)</option>
-        <option value="+266">&#x1F1F1;&#x1F1EE; Lesotho (+266)</option>
-        <option value="+231">&#x1F1F1;&#x1F1F7; Liberia (+231)</option>
-        <option value="+218">&#x1F1F0;&#x1F1F3; Libya (+218)</option>
-        <option value="+261">&#x1F1F0;&#x1F1EE; Madagascar (+261)</option>
-        <option value="+265">&#x1F1F1;&#x1F1F9; Malawi (+265)</option>
-        <option value="+223">&#x1F1E9;&#x1F1F9; Mali (+223)</option>
-        <option value="+222">&#x1F1EC;&#x1F1F2; Mauritania (+222)</option>
-        <option value="+230">&#x1F1F2;&#x1F1F9; Mauritius (+230)</option>
-        <option value="+212">&#x1F1E6;&#x1F1F2; Morocco (+212)</option>
-        <option value="+258">&#x1F1F2;&#x1F1EE; Mozambique (+258)</option>
-        <option value="+264">&#x1F1F2;&#x1F1EA; Namibia (+264)</option>
-        <option value="+227">&#x1F1F3;&#x1F1F7; Niger (+227)</option>
-        <option value="+234">&#x1F1F3;&#x1F1EC; Nigeria (+234)</option>
-        <option value="+250">&#x1F1F7;&#x1F1FA; Rwanda (+250)</option>
-        <option value="+239">&#x1F1EA;&#x1F1F8; Sao Tome and Principe (+239)</option>
-        <option value="+221">&#x1F1E8;&#x1F1E6; Senegal (+221)</option>
-        <option value="+248">&#x1F1F8;&#x1F1EA; Seychelles (+248)</option>
-        <option value="+232">&#x1F1E8;&#x1F1F1; Sierra Leone (+232)</option>
-        <option value="+252">&#x1F1F2;&#x1F1F9; Somalia (+252)</option>
-        <option value="+27">&#x1F1FF;&#x1F1E6; South Africa (+27)</option>
-        <option value="+211">&#x1F1F0;&#x1F1F9; South Sudan (+211)</option>
-        <option value="+249">&#x1F1E6;&#x1F1F7; Sudan (+249)</option>
-        <option value="+268">&#x1F1F8;&#x1F1FE; Eswatini (+268)</option>
-        <option value="+255">&#x1F1E8;&#x1F1EE; Tanzania (+255)</option>
-        <option value="+228">&#x1F1E8;&#x1F1F9; Togo (+228)</option>
-        <option value="+216">&#x1F1EA;&#x1F1F8; Tunisia (+216)</option>
-        <option value="+256">&#x1F1FA;&#x1F1EC; Uganda (+256)</option>
-        <option value="+260">&#x1F1F9;&#x1F1EC; Zambia (+260)</option>
-        <option value="+263">&#x1F1FF;&#x1F1FC; Zimbabwe (+263)</option>
       </datalist>
-
       <button type="submit" onclick="handleFormSubmission(event)">Check Carrier</button>
-      <button type="Reset">Again</button>
+      <button type="Reset" id="resetButton">Clear</button>
     </form>
   </main>
-  <main class="background-section container">
-    <div class="fancy-bg">
-      <div id="carrierResult" title="This is a good Provider"></div>
-      <div class="glo-logo">
-        <img src="./assets/Globacom-Limited-Logo.svg" alt="" />
-      </div>
-      <div class="mtn-logo"><img src="./assets/mtnlogo.png" alt="" /></div>
-      <div class="mobile-logo">
-        <img src="./assets/9mobile-Logo.svg" alt="" />
-      </div>
-      <div class="airtel-logo">
-        <img src="./assets/Airtel_Networks_Limited-Logo.wine.svg" alt="" />
-      </div>
-      <div class="nocarrier-logo">
-        <img src="./assets/generalCarrier.png" alt="" />
-      </div>
-    </div>
-  </main>
-  <!--   --main-section end--    -->
   <script src="script.js"></script>
 </body>
-
 </html>

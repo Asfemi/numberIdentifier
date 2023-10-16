@@ -9,8 +9,6 @@ document.getElementById("phoneForm").addEventListener("submit", function(event) 
     if (provider === "Unknown" || provider === "Invalid Phone Number") {
       alert("Invalid or unknown phone number. Please enter a valid Nigerian phone number.");
     } else {
-      // set alert to empty
-      alert("")
       // Set the image source based on the provider
       switch (provider) {
         case "airtel":

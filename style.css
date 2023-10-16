@@ -20,7 +20,7 @@
 
 body {
     font-family: 'heebo';
-    background-color: var(--white-bg);
+    background: var(--white-bg);
     max-height: 100vh;
 }
 
@@ -66,7 +66,7 @@ body {
 /* second header */
 .flex2-header2 {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
     padding: 7px;
 }
@@ -249,3 +249,109 @@ button:hover {
     
 }
 
+@media(max-width:475px){
+    .container {
+        max-width: 1200px;
+        margin: 50px auto;
+        /* background-color: orangered; */
+        height: 500px;
+    }
+    .form-section {
+        width: 120px;
+        margin: 0 auto;
+    }
+    .main-logo>img {
+        width:100%;
+        /* padding-top: 20px;
+        padding-left: 10px; */
+    }
+    .flex-header {
+        display: block;
+        /* justify-content: space-between;
+        align-items: center;
+        padding: 7px; */
+    }
+    button {
+        padding: 10px 5px;
+        width:150px
+    }
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        color: var(--text-light-black);
+        color:#fff;
+    }
+    
+    .formsection p {
+        text-align: center;
+        font-size: 1.5rem;
+        padding-top: 20px;
+        color:#fff;
+    }
+    body {
+        font-family: 'heebo';
+        background:url('./assets/camp.png') center center no-repeat;
+        max-height: 100vh;
+    }
+}
+@media(min-width:476px) and (max-width:640px){
+    body {
+        font-family: 'heebo';
+        background:url('./assets/ice-cream.jpg') center center no-repeat;
+        max-height: 100vh;
+    }
+    .flex-header {
+        display: block;
+    }
+    .main-logo>img {
+        width:30%;
+        /* padding-top: 20px; */
+        padding-left: 10px;
+    }
+    button {
+        padding: 10px 5px;
+        width:130px
+    }
+    .formsection p {
+        text-align: center;
+        font-size: 1rem;
+        padding-top: 20px;
+    }
+    h1 > span{
+        color: var(--orange-btn-hover)
+    }
+}
+@media(min-width:641px) and (max-width:768px){
+    body {
+        font-family: 'heebo';
+        background:url('./assets/ice-cream.jpg') center center no-repeat;
+        max-height: 100vh;
+    }
+    .flex-header {
+        display: block;
+    }
+    .main-logo>img {
+        width:30%;
+        /* padding-top: 20px; */
+        padding-left: 10px;
+    }
+    button {
+        padding: 10px 5px;
+        width:130px
+    }
+    .formsection p {
+        text-align: center;
+        font-size: 1rem;
+        padding-top: 20px;
+    }
+    h1 > span{
+        color: var(--orange-btn-hover)
+    }
+}
+@media(min-width:769px) and (max-width:1024px){
+    body {
+        font-family: 'heebo';
+        background:url('./assets/ice-cream.jpg') center center no-repeat;
+        max-height: 100vh;
+    }
+}
